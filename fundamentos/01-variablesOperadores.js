@@ -29,7 +29,7 @@ let billetera = null;
 let caja;
 
 //array o arreglos
-let frutas = ["Banana", "Manzana", 12, true];
+let frutas = ["Banana", "Manzana", "Pera", "uva"];
 
 //objetos u object
 let persona = {
