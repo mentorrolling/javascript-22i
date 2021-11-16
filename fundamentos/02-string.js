@@ -56,14 +56,34 @@ Reemplazar la palabra React por "Esta librería" en un nuevo texto.
 Devuelve en consola si el texto contiene la palabra "eficiente"
 Devuelve en consola si el texto contiene la palabra "elementos"
 
+*/
+
+/*
 Tarea 2:
  indexOf()
  
 Dada la frase: "Hoy es un buen día para aprender"
 Separa en un arreglo cada palabra
 Crea una nueva frase basandote en la anterior que diga: "Hoy es un buen día"
+ */
 
+const frase = "Hoy es un buen día para aprender";
+
+console.log(frase.split(" "));
+
+const corte = frase.indexOf("para");
+console.log(frase.slice(0, corte));
+
+const nuevaFrase = frase.slice(0, corte - 1);
+
+/*
 Tarea 3:
 
 Capitaliza la siguiente palabra: "marmota"
 */
+
+let palabra = "josecito";
+
+let capitalizada = palabra.charAt(0).toUpperCase() + palabra.slice(1);
+
+console.log(capitalizada);
