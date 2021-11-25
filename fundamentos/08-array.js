@@ -21,7 +21,7 @@ for (let i = 0; i < alumnos.length; i++) {
   console.log(`Bienvenido ${alumnos[i]}`);
 }
 
-for (const alumno of alumnos) {
+for (let alumno of alumnos) {
   console.log(`Bienvenido querid@ ${alumno}`);
 }
 

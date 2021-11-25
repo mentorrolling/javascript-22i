@@ -37,6 +37,7 @@ let persona = {
   apellido: "Figueroa",
 };
 
+
 //Operadores
 
 //Aritméticos
@@ -58,7 +59,7 @@ console.log(numero3 != numero2);
 
 //Negacion
 let abierto = false;
-
+console.log(!abierto)
 //Tarea
 // Creamos dos variables: numero1, numero2
 // mostramos por consola los resultados de las operaciones
