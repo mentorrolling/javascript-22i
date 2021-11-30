@@ -107,3 +107,5 @@ function calcularTabla() {
   //   console.log('El valor ingresado no es un número')
   // }
 }
+
+
