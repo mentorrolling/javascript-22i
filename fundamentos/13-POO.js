@@ -61,7 +61,12 @@ class Cuenta {
     this.saldo += valor;
   }
   extraer(valor) {
-    this.saldo -= valor;
+    if (valor < this.saldo) {
+      this.saldo -= valor;  
+    }else{
+      console.error(`No tienes saldo disponible. Tu saldo es de ${this.saldo}`)
+    }
+    
   }
   informar() {
     console.log("====Datos de la cuenta====");
