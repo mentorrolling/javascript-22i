@@ -58,10 +58,14 @@ class Cuenta {
     this.saldo = saldo;
   }
   ingresar(valor) {
-    this.saldo += valor;
+    if (valor > 0) {
+      this.saldo += valor;
+    }else{
+      console.error(`No se puede ingresar saldo negativo`)
+    }
   }
   extraer(valor) {
-    if (valor < this.saldo) {
+    if (valor < this.saldo && valor > 0) {
       this.saldo -= valor;  
     }else{
       console.error(`No tienes saldo disponible. Tu saldo es de ${this.saldo}`)
