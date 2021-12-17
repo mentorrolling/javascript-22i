@@ -1,7 +1,14 @@
 body {
-  background-color: rgb(46, 85, 85);
+  background-color: bisque;
 }
 .card-tareas {
   margin-top: 50px;
   align-items: center;
+}
+.container {
+  background-color:bisque;
+  margin-top: 200px;
+}
+.numeroMagico {
+    width: 400px;
 }
