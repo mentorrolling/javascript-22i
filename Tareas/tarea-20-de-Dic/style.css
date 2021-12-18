@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(26, 1, 94);
+  background-color: linear-gradient(
+    0deg,
+    rgba(26, 1, 94, 1) 0%,
+    rgba(96, 0, 250, 1) 100%
+  );
+}
+.card-tareas {
+  margin-top: 50px;
+  align-items: center;
+}

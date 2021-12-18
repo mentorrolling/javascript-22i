@@ -11,16 +11,42 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css" />
     <title>Números mágicos</title>
   </head>
   <body>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <div class="container">
+      <div class="row card-tareas">
+        <div class="col-12 col-md-6 offset-md-3">
+          <div class="card text-center">
+            <div class="card-header">
+              <h1>Juega contra la maquina 🤖🕹</h1>
+            </div>
+            <div class="card-body" id="card-game">
+              <button
+                type="button"
+                id="start"
+                class="btn btn-primary btn-lg my-4 rounded-pill"
+              >
+                Empezar a jugar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script de sweetAlert2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Bootstrap script JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <!-- main script -->
+
+    <!-- main script JS -->
     <script src="./app.js"></script>
   </body>
 </html>
