@@ -9,7 +9,7 @@ let jugadorInput = document.querySelector("#jugadorInput")
 let jugadorButton = document.querySelector("#jugadorButton")
 let gameConcepto = document.querySelector("#game")
 let historial = []
-
+let score = 0
 
 
 
@@ -25,7 +25,7 @@ console.log(cpu)
 const game = function () {
   if (jugadorInput.value == cpu) {
     
-    if (confirm("Ganaste Quieres volver a jugar?")) {
+    if (confirm(`Ganaste Puntos: ${score+1} Quieres volver a jugar?`)) {
       
       location.reload()
     }
@@ -44,8 +44,17 @@ const rango = function () {
 }
 
 const mostrarHistorial = function () {
-
+  const scoreMuestra = document.createElement("div");
+  let htmlSocre = `
+  <div class="card row">
+  <div class="card-body col">
+            <h5>Puntos: ${++score}</h5>
+        </div>
+    </div>
   
+  `
+  scoreMuestra.innerHTML=htmlSocre
+  gameConcepto.appendChild(scoreMuestra)
 
   historial.map(function (historia, i) {
   
@@ -53,7 +62,7 @@ const mostrarHistorial = function () {
     
     let historialMuestra = `
     <div class="card row">
-    <div class="card-body col offset-5">    
+       
     <div class="card-body col offset-5">
             <h5>${i+1} - ${historia}</h5>
         </div>
@@ -80,7 +89,7 @@ const agregarHistorial = function () {
 }
 
 
-const enfiarInfo = function (e) {
+const enviarInfo = function (e) {
   if(e.keyCode === 13 && parseInt(jugadorInput.value)
      || e.button===0 && parseInt(jugadorInput.value)){
     game();
@@ -91,8 +100,8 @@ const enfiarInfo = function (e) {
 }
 
 
-jugadorInput.addEventListener("keypress", enfiarInfo)
-jugadorButton.addEventListener("click", enfiarInfo)
+jugadorInput.addEventListener("keypress", enviarInfo)
+jugadorButton.addEventListener("click", enviarInfo)
 
 
 
