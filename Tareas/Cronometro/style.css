@@ -1,0 +1,14 @@
+body {
+  background-color: bisque;
+}
+.container {
+  margin-top: 300px;  
+  
+}
+#cronometro {
+  background-color: white  
+}
+#tiempo{
+  margin: 50px;
+  font-size: 100px;
+}
