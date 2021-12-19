@@ -16,7 +16,7 @@ let score = 0
 
 const numeroRandom = function () {
   
-  return Math.round(Math.random() * 100)
+  return Math.round(Math.random() * 20)
 }
 
 let cpu = numeroRandom();
