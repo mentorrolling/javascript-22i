@@ -11,6 +11,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <!-- Iconos de Font awesome -->
+    <script src="https://use.fontawesome.com/085fe3a535.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <title>Números mágicos</title>
   </head>
@@ -30,6 +32,33 @@
               >
                 Empezar a jugar
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ===================================================== -->
+      <div class="row card-tareas">
+        <div class="col-12 col-md-6 offset-md-3">
+          <div class="card text-center">
+            <div class="card-header">
+              <h2>Cronómetro ⏱</h2>
+            </div>
+            <div class="card-body" id="card-game">
+              <p class="contador">
+                <span id="hora">0</span> : <span id="minuto">0</span> :
+                <span id="segundo">0</span>
+              </p>
+              <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-primary" id="play" type="button">
+                  <i class="fa fa-play" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-danger" id="pause" type="button">
+                  <i class="fa fa-pause" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-secondary" id="repeat" type="button">
+                  <i class="fa fa-repeat" aria-hidden="true"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>

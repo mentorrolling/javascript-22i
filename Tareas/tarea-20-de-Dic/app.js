@@ -106,3 +106,53 @@ btnStart.addEventListener("click", remplazar);
 
 /*Realizar una web con un cronómetro, que tenga las opciones de iniciar,
 reset (volver el cronómetro a 0) y pausar.*/
+
+let segundoId = document.querySelector("#segundo");
+let minutoId = document.querySelector("#minuto");
+let horaId = document.querySelector("#hora");
+
+let btnIniciar = document.querySelector("#play");
+let btnPausa = document.querySelector("#pause");
+let btnResetear = document.querySelector("#repeat");
+
+let contador_s = 0;
+let contador_m = 0;
+let contador_h = 0;
+
+const iniciar = function () {
+  segundero = setInterval(function () {
+    if (contador_s === 60) {
+      contador_s = 0;
+      contador_m++;
+      minutoId.innerHTML = contador_m;
+
+      if (contador_m === 60) {
+        contador_h++;
+        contador_m = 0;
+      }
+    }
+    segundoId.innerHTML = contador_s;
+    minutoId.innerHTML = contador_m;
+    horaId.innerHTML = contador_h;
+    contador_s++;
+  }, 1000);
+};
+
+const pausar = function () {
+  clearInterval(segundero);
+};
+
+const resetear = function () {
+  pausar();
+  segundoId.innerHTML = 0;
+  minutoId.innerHTML = 0;
+  horaId.innerHTML = 0;
+
+  contador_s = 0;
+  contador_m = 0;
+  contador_h = 0;
+};
+
+btnIniciar.addEventListener("click", iniciar);
+btnPausa.addEventListener("click", pausar);
+btnResetear.addEventListener("click", resetear);

@@ -10,3 +10,6 @@ body {
   margin-top: 50px;
   align-items: center;
 }
+.contador {
+  font-size: 2rem;
+}
