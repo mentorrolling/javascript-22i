@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'lato';
+}
+
+:root {
+    --background: rgb(255, 255, 255);
+    --background-linear1: rgba(255, 255, 255, 1);
+    --background-linear2: rgba(255, 255, 130, 1);
+    --container: #353535;
+    --text-color: white;
+    --screen: #353535;
+    --btn-hover: black;
+    --btn-hover-text: #fff56d;
+    --shadow: rgba(59, 59, 59, 0.75);
+}
+
+span {
+    font-weight: 300;
+    font-size: 100px;
+}
+
+.c-body {
+    background: var(--background);
+    background: linear-gradient(135deg, var(--background-linear1) 0%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-time {
+    background: var(--container);
+    width: 600px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 11px 17px 22px 0 var(--shadow);
+}
+
+.c-time>.screen {
+    color: var(--text-color);
+    background-color: var(--screen);
+    margin: 6px;
+    text-align: center;
+}
+
+.c-btn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+    margin: 15px 100;
+}
+
+.c-btn>button {
+    display: block;
+    background: none;
+    border: none;
+    outline: inherit;
+    cursor: pointer;
+    height: 88px;
+    border-radius: 50%;
+    color: var(--text-color);
+    font-size: 50px;
+}
+
+button:hover {
+    transform: scale(1.5);
+    transition: 0.5s;
+}
+
