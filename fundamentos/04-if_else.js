@@ -72,3 +72,33 @@ if (isNaN(edad)) {
     alert("No puedes entrar a Rolling Fest 😞");
   }
 }
+
+/*
+ Usando If And Else
+-----------------------
+**Números con condicionales**
+
+- Ingresan dos números
+- Si el primero es mayor que el segundo mostrar en consola 
+la suma de ambos
+- Si el primero es menor que el segundo mostrar en consola 
+la resta del segundo menos el primero.
+- Si son iguales mostrar en consola la multiplicación de ambos.
+
+ejemplo del mensaje: 2 es menor que 5, la resta de 5 - 2 es igual a 3
+*/
+
+let num1 = parseInt(prompt("Ingresa un primer numero"));
+let num2 = parseInt(prompt("Ingresa un segundo numero"));
+
+if (isNaN(num1, num2)) {
+  alert('Debe ingresar un numero');
+} else {
+  if (num1 > num2){
+console.log(`la suma del primer numero mas el segundo numero es ${num1 + num2}`);
+  } else if ( num1 < num2){
+    console.log(`la resta del segundo numero menos el primer numero es ${num2 - num1}`);
+  } if ( num1 === num2){
+    console.log(`la multiplicacion del primer numero por el segundo numero es ${num1 * num2}`);
+  }
+}

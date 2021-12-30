@@ -191,3 +191,78 @@ const mensajeJuego = function (mensaje) {
       break;
   }
 };
+
+
+// ================================
+// Tarea
+
+// Crear una aplicación con javascript de un carrito de compras
+// -------------------------------------------------------------------
+
+// - La aplicación debe poder hacer lo siguiente:
+//  - Agregar productos al carrito (agregarlos hasta que se cancele el prompt)
+//  - Eliminar un producto del carrito (recibe el nombre del producto a eliminar)
+//  - Filtrar elementos del carrito según una palabra o término ingresado
+//  - Listar todos los productos que estén en el carrito en orden alfabético
+
+//agregar producto
+
+let carrito=[]
+
+function carritoCompras (){
+    let articulo = prompt("Ingrese el articulo que desea adquirir 🛒")
+    while (articulo) {
+carrito.push(articulo.toUpperCase())
+articulo = prompt("Ingrese el articulo que desea adquirir 🛒")
+    }
+    listadoArticulos(carrito)
+}
+  
+//listar articulos en orden alfabetico
+
+function listadoArticulos(array){
+
+    if (array.length > 0){
+        console.log("====Listado de articulos====");
+        array.sort().map(function(item, index){
+            console.log(`${index + 1} - ${item}`);
+        })
+        console.log("============");
+    }else {
+        console.log("No hay articulos para listar");
+      }
+    }
+
+//filtrar articulos
+
+function filtrarArticulos(termino = prompt("Ingrese el término o palabra a buscar")) {
+    let newArticulos = carrito.filter(function (articulo) {
+      return articulo.includes(termino.toUpperCase());
+    });
+  
+    if (newArticulos.length > 0) {
+      listadoArticulos(newArticulos);
+    } else {
+      console.warn("No hay resultados para la búsqueda");
+    }
+  }
+
+  //eliminar articulo
+
+  const borrarArticulo = function(){
+      let producto = prompt("Ingrese el articulo que desea eliminar 🚫")
+
+      let indice = carrito.indexOf(producto.toUpperCase())
+
+      if(indice>=0){
+        let validar = confirm(
+            `Está seguro que quiere eliminar ${carrito[indice]}`
+          );
+          if (validar){
+              carrito.splice(indice, 1)
+              alert("Articulo eliminado")
+          }
+      }else{
+          alert("Articulo no encontrado")
+      }
+  }

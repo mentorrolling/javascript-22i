@@ -22,7 +22,7 @@ console.log(apellido.length);
 //obtener un caracter en particular
 console.log(nombre.charAt(5));
 
-//obtener caracteres desde una posicion
+//obtener caracteres desde una posicion 
 console.log(nombre.substr(1, 3));
 
 //quitar espacios en blanco adelante y atras de un string
@@ -58,6 +58,11 @@ Devuelve en consola si el texto contiene la palabra "elementos"
 
 */
 
+let texto = "React te ayuda a crear interfaces de usuario interactivas de forma sencilla. Diseña vistas simples para cada estado en tu aplicación, y React se encargará de actualizar y renderizar de manera eficiente los componentes correctos cuando los datos cambien.";
+let nuevoTexto = texto.replace("React", 'Esta librería');
+console.log(texto.includes("eficiente"));
+console.log(texto.includes("elementos"));
+
 /*
 Tarea 2:
  indexOf()
@@ -82,8 +87,8 @@ Tarea 3:
 Capitaliza la siguiente palabra: "marmota"
 */
 
-let palabra = "josecito";
+let palabra = "marmota";
 
 let capitalizada = palabra.charAt(0).toUpperCase() + palabra.slice(1);
 
-console.log(capitalizada);
+console.log(capitalizada) 

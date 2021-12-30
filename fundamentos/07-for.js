@@ -15,6 +15,9 @@
 
 const tabla = prompt("Ingrese la tabla a calcular");
 
+if(isNaN(tabla) || tabla===""){
+  alert(`Debe ingresar un numero`)
+}
 console.log(`======Tabla del ${tabla}======`);
 for (let i = 1; i <= 10; i++) {
   // 2 x 1 = 2
