@@ -1,0 +1,17 @@
+body {
+  background-color: bisque;
+}
+.container-fluid{
+  margin-top: 150px;  
+  
+}
+
+#cronometro {
+  background-color: white;  
+  margin: 0px;
+  
+}
+#tiempo{
+  margin: 50px;
+  font-size:5rem;
+}
